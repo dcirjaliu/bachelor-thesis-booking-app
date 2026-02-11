@@ -13,7 +13,12 @@
   width: v.$width;
   scroll-snap-align: start;
   scroll-snap-stop: always;
+}
+
+.page1 {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 10px;
 }
