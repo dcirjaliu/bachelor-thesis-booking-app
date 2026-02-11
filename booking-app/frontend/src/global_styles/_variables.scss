@@ -4,3 +4,12 @@ $bg-color: #e5fbff;
 //pages height and width
 $height: 100vh;
 $width: 100vw;
+
+//accent shape colors
+$accent-shape-color-gr-1: black;
+$accent-shape-color-gr-2: #3533cd;
+$accent-shape-color: linear-gradient(
+  to top,
+  $accent-shape-color-gr-1,
+  $accent-shape-color-gr-2
+);

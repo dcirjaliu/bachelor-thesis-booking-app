@@ -1,0 +1,8 @@
+@use "../../global_styles/variables" as v;
+
+.shape {
+  height: v.$height;
+  width: 65%;
+  background: v.$accent-shape-color;
+  border-radius: 0 350px 350px 0;
+}

@@ -1,0 +1,17 @@
+@use "../../global_styles/variables" as v;
+
+.shape {
+  height: v.$height;
+  width: 45%;
+  border-radius: 350px 350px 350px 350px;
+  background-color: black;
+  overflow: hidden;
+  position: absolute;
+  right: -200px;
+}
+
+.shape img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
