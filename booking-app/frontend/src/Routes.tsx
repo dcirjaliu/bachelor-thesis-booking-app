@@ -1,9 +1,12 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import IndexPage from "./pages/Index/Index";
 
 function AppRoutes() {
   return (
     <BrowserRouter>
-      <Routes></Routes>
+      <Routes>
+        <Route path="/" element={<IndexPage />} />
+      </Routes>
     </BrowserRouter>
   );
 }
