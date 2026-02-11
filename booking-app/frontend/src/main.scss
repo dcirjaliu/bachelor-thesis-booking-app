@@ -1,6 +1,9 @@
+@use "./global_styles/variables" as v;
+
 //main reset for our app
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: v.$bg-color;
 }
