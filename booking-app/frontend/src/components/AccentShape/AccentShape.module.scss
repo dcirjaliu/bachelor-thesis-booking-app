@@ -2,9 +2,8 @@
 
 .shape {
   height: v.$height;
-  flex: 1;
   background: v.$accent-shape-color;
   border-radius: 0 50% 50% 0;
-  z-index: 2;
   display: flex;
+  width: 50%;
 }
