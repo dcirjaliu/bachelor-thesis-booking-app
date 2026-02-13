@@ -15,3 +15,9 @@ $accent-shape-color: linear-gradient(
   $accent-shape-color-gr-1,
   $accent-shape-color-gr-2
 );
+
+@mixin gradient-text($from, $to) {
+  background: linear-gradient(to right, $from, $to);
+  -webkit-background-clip: text;
+  color: transparent;
+}
