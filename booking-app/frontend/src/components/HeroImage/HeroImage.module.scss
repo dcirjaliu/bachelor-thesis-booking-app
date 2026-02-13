@@ -2,12 +2,12 @@
 
 .shape {
   height: v.$height;
-  width: 45%;
-  border-radius: 350px 350px 350px 350px;
+  flex: 1;
+  border-radius: 50%;
   background-color: black;
-  overflow: hidden;
-  position: absolute;
-  right: -200px;
+  display: flex;
+  z-index: 1;
+  position: relative;
 }
 
 .shape img {

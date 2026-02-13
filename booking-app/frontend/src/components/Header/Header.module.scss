@@ -1,0 +1,60 @@
+@use "../../global_styles/variables" as v;
+
+.mainheader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: v.$main-color1;
+  max-height: 10%;
+  padding-right: 50px;
+}
+
+.logoWrapper {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.logo {
+  height: 200px;
+  width: auto;
+  transition: height 0.3s ease;
+}
+
+.btnsContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  overflow: visible;
+  max-width: 50%;
+}
+
+.btnsContainer .text {
+  font-weight: 600;
+  color: #aaaaaa;
+  font-size: medium;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    max-height: 200px;
+  }
+
+  .btnsContainer {
+    align-items: flex-end;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    height: 150px;
+  }
+
+  .mainheader {
+    padding: 10px 3%;
+  }
+}

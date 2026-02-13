@@ -1,0 +1,29 @@
+.btn {
+  border: none;
+  padding: 0.8em 2em;
+  min-width: 120px;
+  border-radius: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: all 450ms ease-in-out;
+  white-space: nowrap;
+  font-size: 1rem;
+  background: linear-gradient(0deg, #a47cf3, #683fea);
+}
+
+.sparkle {
+  fill: #aaaaaa;
+  transition: all 800ms ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn:hover .sparkle {
+  fill: white;
+  transform: scale(1.2);
+}
