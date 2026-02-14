@@ -83,3 +83,13 @@
   flex-wrap: wrap;
   padding: 20px 0 20px 0;
 }
+
+.page2 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}

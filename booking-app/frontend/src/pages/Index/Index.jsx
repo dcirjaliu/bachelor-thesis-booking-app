@@ -5,6 +5,7 @@ import Header from "../../components/Header/Header";
 import "../../global_styles/_typography.scss";
 import Typewriter from "typewriter-effect";
 import Button from "../../components/Button/Button";
+import CardList from "../../components/CardList/CardList";
 
 function Index() {
   return (
@@ -54,8 +55,11 @@ function Index() {
           </div>
         </div>
       </section>
-      <section className={styles.page} id="page2">
-        Page 2
+      <section className={`${styles.page} ${styles.page2}`} id="page2">
+        <div className={styles.header}>
+          <h2 className="mainPage2">Programează-te acum!</h2>
+        </div>
+        <CardList />
       </section>
       <section className={styles.page} id="page3">
         Page 3

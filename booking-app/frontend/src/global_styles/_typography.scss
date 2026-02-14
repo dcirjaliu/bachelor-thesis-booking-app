@@ -21,3 +21,8 @@ $fontFamily: "Montserrat", sans-serif;
   text-align: left;
   color: black;
 }
+
+.mainPage2 {
+  font-size: clamp(3rem, 6vw, 9vh);
+  color: v.$main-color1;
+}
