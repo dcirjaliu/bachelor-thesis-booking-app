@@ -10,10 +10,8 @@ function Header() {
         <img className={styles.logo} src={logo} alt="Logo" />
       </div>
       <div className={styles.btnsContainer}>
-        <Button>
-          <text>Intra in contul de student</text>
-        </Button>
-        <Button>Contact</Button>
+        <Button variant="primary">Intră în cont</Button>
+        <Button variant="secondary">Creează-ți cont</Button>
       </div>
     </header>
   );

@@ -3,6 +3,8 @@ import AccentShape from "../../components/AccentShape/AccentShape";
 import HeroImage from "../../components/HeroImage/HeroImage";
 import Header from "../../components/Header/Header";
 import "../../global_styles/_typography.scss";
+import Typewriter from "typewriter-effect";
+import Button from "../../components/Button/Button";
 
 function Index() {
   return (
@@ -11,8 +13,40 @@ function Index() {
         <Header />
         <div className={styles.contentContainer}>
           <div className={styles.gridItem}>
-            <div className="typewriter">
-              <h1>Rezervă-ți timpul, nu doar locul.</h1>
+            <div className={styles.wrapper}>
+              <h1 className="mainPageH1">
+                <Typewriter
+                  onInit={(typewriter) => {
+                    typewriter
+                      .typeString("Rezervă-ți timpul, nu doar locul.")
+                      .pauseFor(1500)
+                      .deleteAll()
+                      .typeString("Simplu.")
+                      .pauseFor(1000)
+                      .deleteAll()
+                      .typeString("Rapid.")
+                      .pauseFor(1000)
+                      .deleteAll()
+                      .typeString("Rezervă-ți timpul, nu doar locul.") // Îl scrie iar la final
+                      .start(); // Pornește secvența
+                  }}
+                  options={{
+                    autoStart: true,
+                    delay: 75,
+                    cursor: "|", // Opțional: poți lăsa cursorul sau îl poți ascunde la final cu CSS
+                  }}
+                />
+              </h1>
+            </div>
+            <div className={styles.wrapper}>
+              <h2 className="mainPageH2">
+                Gestionează-ți rapid accesul la sălile de studiu, terenurile
+                sportive și spălătoriile din cămine.
+              </h2>
+              <div className={styles.btnsContainer}>
+                <Button variant="primary">Află mai multe</Button>
+                <Button variant="secondary">Întrebări frecvente</Button>
+              </div>
             </div>
           </div>
           <div className={styles.gridItem}>

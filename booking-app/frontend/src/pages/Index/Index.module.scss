@@ -26,12 +26,60 @@
   grid-template-columns: 1fr 1fr;
   flex: 1;
   padding: 5px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr; //on mobile the left elements take all the space left
+  }
 }
 
 .page1 .contentContainer .gridItem {
   color: rgb(36, 6, 6);
   padding: 40px;
-  text-align: center;
   flex-grow: 1;
-  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+
+  &:last-child {
+    @media (max-width: 768px) {
+      display: none; //on mobile the picture dissapears
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 20px; // Reducem padding-ul pe mobil ca să lăsăm textul să "respire"
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 50%;
+  text-align: left;
+
+  &:first-of-type {
+    justify-content: flex-end;
+    min-height: 50%;
+
+    @media (max-width: 768px) {
+      flex-basis: 50%;
+    }
+
+    @media (max-height: 500px), (max-width: 380px) {
+      min-height: auto;
+    }
+  }
+  &:last-of-type {
+    justify-content: flex-start;
+    padding-top: 10px;
+  }
+}
+
+.btnsContainer {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 20px 0 20px 0;
 }

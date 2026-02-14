@@ -29,13 +29,16 @@
   gap: 12px;
   flex-wrap: wrap;
   overflow: visible;
-  max-width: 50%;
-}
 
-.btnsContainer .text {
-  font-weight: 600;
-  color: #aaaaaa;
-  font-size: medium;
+  @media (max-width: 768px) {
+    --btn-font-size: 0.85rem;
+    --btn-padding: 0.5rem 1.2rem;
+  }
+
+  @media (max-width: 480px) {
+    --btn-font-size: 0.6rem;
+    --btn-padding: 0.4rem 0.8rem;
+  }
 }
 
 @media (max-width: 768px) {

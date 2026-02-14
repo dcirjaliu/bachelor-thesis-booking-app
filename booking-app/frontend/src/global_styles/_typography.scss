@@ -1,48 +1,23 @@
 @use "./variables" as v;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&display=swap");
 
-.typewriter {
-  display: flex;
-  font-size: 2em;
-  font-weight: 900;
-  justify-content: center;
-  align-items: center;
-  margin-top: 55px;
-  width: 100%;
-  flex-direction: row;
-  flex-wrap: wrap;
+$fontFamily: "Montserrat", sans-serif;
 
-  h1 {
-    display: inline-block;
-    overflow: hidden;
-    // white-space: nowrap;
+.mainPageH1 {
+  font-size: clamp(4rem, 10vw, 12vh);
+  line-height: 1.1;
+  text-align: left;
+  display: block;
+  min-height: auto;
 
-    border-right: 0.15em solid v.$main-color1;
-    animation:
-      typing 3.2s steps(32, end) 0s 1 both,
-      blink-caret 0.75s step-end infinite;
-
-    @include v.gradient-text(
-      v.$accent-shape-color-gr-1,
-      v.$accent-shape-color-gr-2
-    );
-  }
+  @include v.gradient-text(
+    v.$accent-shape-color-gr-1,
+    v.$accent-shape-color-gr-2
+  );
 }
 
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 32ch;
-  }
-}
-
-@keyframes blink-caret {
-  from,
-  to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: v.$main-color1;
-  }
+.mainPageH2 {
+  font-size: clamp(1.5rem, 3vw, 4vh);
+  text-align: left;
+  color: black;
 }
