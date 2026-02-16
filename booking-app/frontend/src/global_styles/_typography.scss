@@ -23,6 +23,7 @@ $fontFamily: "Montserrat", sans-serif;
 }
 
 .mainPage2 {
+  margin-bottom: auto;
   font-size: clamp(3rem, 6vw, 9vh);
   color: v.$main-color1;
 }

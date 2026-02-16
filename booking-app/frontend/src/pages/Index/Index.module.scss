@@ -13,6 +13,7 @@
   width: v.$width;
   scroll-snap-align: start;
   scroll-snap-stop: always;
+  background: v.$bg-color;
 }
 
 .page1 {
@@ -85,11 +86,41 @@
 }
 
 .page2 {
-  display: flex;
-  justify-content: center;
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  padding: 50px 30px;
+  overflow-y: visible;
   text-align: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 20px;
-  padding: 20px;
+
+  @media screen {
+    padding: 80px 20px;
+  }
+}
+
+.page3 {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 3.5fr 1.5fr;
+  height: v.$height;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  width: 100%;
+}
+
+.div1 {
+  grid-row: 1;
+  overflow: hidden;
+}
+
+.img {
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+}
+
+.div2 {
+  grid-row: 2;
 }

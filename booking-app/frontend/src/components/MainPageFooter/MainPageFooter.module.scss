@@ -1,0 +1,56 @@
+@use "../../global_styles/variables" as v;
+
+.footer {
+  background-color: #240b93;
+  width: v.$width;
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 60px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topSection {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.copyright {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+  margin-top: 20px;
+  width: 100%;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.textContainer {
+  text-align: left;
+  color: white;
+  flex: 1;
+
+  .h1 {
+    font-size: 3rem;
+    background: v.$gradient;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.btnsContainer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  flex: 1;
+  --btn-font-size: 1.2rem;
+  --btn-padding: 1rem 4rem;
+  --btn-max-width: 400px;
+  --btn-border-radius: 10px;
+  overflow: visible;
+}
