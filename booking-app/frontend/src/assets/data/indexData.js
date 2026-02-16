@@ -4,18 +4,21 @@ import imgCampus from "../images/Campus.jpg";
 
 export const services = [
   {
+    key: 1,
     title: "Spații de studiu",
     description:
       "Rezervă-ți unul dintre spațiile dedicate studiului din cadrul Bibliotecii UPT.",
     image: imgBUPT,
   },
   {
+    key: 2,
     title: "Baze sportive",
     description:
       "Fă o rezervare la terenurile de sport sau sălile de sport din cadrul Bazei 2 UPT.",
     image: imgBaza2,
   },
   {
+    key: 3,
     title: "Servicii Campus",
     description:
       "Rezervă-ți unul dintre intervalele orare disponibile la spălătoriile din cămine.",

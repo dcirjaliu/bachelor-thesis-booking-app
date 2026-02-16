@@ -1,7 +1,7 @@
 @use "../../global_styles/variables" as v;
 
 .card {
-  width: 400px;
+  width: 100%;
   height: 500px;
   background: v.$main-color1;
   display: flex;

@@ -6,6 +6,8 @@ import "../../global_styles/_typography.scss";
 import Typewriter from "typewriter-effect";
 import Button from "../../components/Button/Button";
 import CardList from "../../components/CardList/CardList";
+import img from "../../assets/images/people.svg";
+import MainPageFooter from "../../components/MainPageFooter/MainPageFooter";
 
 function Index() {
   return (
@@ -61,8 +63,13 @@ function Index() {
         </div>
         <CardList />
       </section>
-      <section className={styles.page} id="page3">
-        Page 3
+      <section className={styles.page3} id="page3">
+        <div className={styles.div1}>
+          <img className={styles.img} src={img} />
+        </div>
+        <div className={styles.div2}>
+          <MainPageFooter />
+        </div>
       </section>
     </div>
   );

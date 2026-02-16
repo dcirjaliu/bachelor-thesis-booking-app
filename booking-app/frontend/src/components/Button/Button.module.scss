@@ -5,8 +5,10 @@
   border: none;
   font-size: var(--btn-font-size, 1rem);
   padding: var(--btn-padding, 0.8em 2em);
-  max-width: 200px;
-  border-radius: 3em;
+  max-width: var(--btn-max-width, 200px);
+  //max-width: 200px;
+  //border-radius: 3em;
+  border-radius: var(--btn-border-radius, 3em);
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -14,6 +16,7 @@
   transition: all 450ms ease-in-out;
   white-space: nowrap;
   font-family: t.$fontFamily;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
 }
 
 .primary {
@@ -24,6 +27,7 @@
 .secondary {
   background-color: v.$btn-color-2;
   color: v.$main-color2;
+  border: 1px solid rgba(255, 255, 255, 0.8);
 }
 
 .sparkle {
