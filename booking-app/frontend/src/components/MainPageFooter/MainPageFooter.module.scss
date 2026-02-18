@@ -9,6 +9,7 @@
   padding: 40px 60px;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .topSection {
@@ -33,7 +34,7 @@
   color: white;
   flex: 1;
 
-  .h1 {
+  h1 {
     font-size: 3rem;
     background: v.$gradient;
     background-clip: text;
@@ -53,4 +54,42 @@
   --btn-max-width: 400px;
   --btn-border-radius: 10px;
   overflow: visible;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 20px;
+  }
+
+  .topSection {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .textContainer {
+    text-align: center;
+    flex: none;
+
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    h3 {
+      font-size: 1rem;
+    }
+  }
+
+  .btnsContainer {
+    justify-content: center;
+    flex: none;
+    width: 100%;
+
+    button {
+      width: 100%;
+      max-width: 100px;
+      --btn-font-size: 1rem;
+      --btn-padding: 1rem 4rem;
+      --btn-max-width: 400px;
+    }
+  }
 }

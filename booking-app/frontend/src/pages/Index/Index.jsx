@@ -1,5 +1,4 @@
 import styles from "./Index.module.scss";
-import AccentShape from "../../components/AccentShape/AccentShape";
 import HeroImage from "../../components/HeroImage/HeroImage";
 import Header from "../../components/Header/Header";
 import "../../global_styles/_typography.scss";
@@ -8,14 +7,24 @@ import Button from "../../components/Button/Button";
 import CardList from "../../components/CardList/CardList";
 import img from "../../assets/images/people.svg";
 import MainPageFooter from "../../components/MainPageFooter/MainPageFooter";
+import Grid from "@mui/material/Grid";
+import { Box } from "@mui/material";
 
 function Index() {
   return (
     <div className={styles.snapContainer}>
       <section className={`${styles.page} ${styles.page1}`} id="page1">
         <Header />
-        <div className={styles.contentContainer}>
-          <div className={styles.gridItem}>
+        <Grid container sx={{ flex: 1, p: "5px" }}>
+          <Grid
+            size={{ xs: 12, md: 6 }}
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              p: { xs: "20px", md: "40px" },
+              color: "rgb(36, 6, 6)",
+            }}
+          >
             <div className={styles.wrapper}>
               <h1 className="mainPageH1">
                 <Typewriter
@@ -51,11 +60,18 @@ function Index() {
                 <Button variant="secondary">Întrebări frecvente</Button>
               </div>
             </div>
-          </div>
-          <div className={styles.gridItem}>
+          </Grid>
+          <Grid
+            size={{ md: 6 }}
+            sx={{
+              display: { xs: "none", md: "flex" },
+              flexDirection: "column",
+              p: "40px",
+            }}
+          >
             <HeroImage />
-          </div>
-        </div>
+          </Grid>
+        </Grid>
       </section>
       <section className={`${styles.page} ${styles.page2}`} id="page2">
         <div className={styles.header}>
@@ -63,13 +79,42 @@ function Index() {
         </div>
         <CardList />
       </section>
-      <section className={styles.page3} id="page3">
-        <div className={styles.div1}>
-          <img className={styles.img} src={img} />
-        </div>
-        <div className={styles.div2}>
-          <MainPageFooter />
-        </div>
+      <section className={styles.page} id="page3">
+        <Box
+          component="section"
+          id="page3"
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            height: "100vh",
+            width: "100%",
+            overflow: "hidden",
+            scrollSnapAlign: "start",
+            scrollSnapStop: "always",
+          }}
+        >
+          <Box
+            sx={{
+              flex: { xs: 7, md: 3.5 },
+              overflow: "hidden",
+              minHeight: 0,
+            }}
+          >
+            <img className={styles.img} src={img} alt="Section visual" />
+          </Box>
+          <Box
+            sx={{
+              flex: { xs: 3, md: 1.5 },
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+              p: 2,
+            }}
+          >
+            <MainPageFooter />
+          </Box>
+        </Box>
       </section>
     </div>
   );
