@@ -9,7 +9,7 @@ function MainPageFooter() {
         {" "}
         {}
         <aside className={styles.textContainer}>
-          <h1 className={styles.h1}>Ești gata să îți rezervi locul?</h1>
+          <h1>Ești gata să îți rezervi locul?</h1>
           <h3>
             Intră în contul tău pentru a face o rezervare sau contactează-ne
             dacă întâmpini dificultăți.
