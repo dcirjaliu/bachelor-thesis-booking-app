@@ -1,6 +1,5 @@
 import styles from "./Index.module.scss";
 import HeroImage from "../../components/HeroImage/HeroImage";
-import Header from "../../components/Header/Header";
 import "../../global_styles/_typography.scss";
 import Typewriter from "typewriter-effect";
 import Button from "../../components/Button/Button";
@@ -9,23 +8,32 @@ import img from "../../assets/images/people.svg";
 import MainPageFooter from "../../components/MainPageFooter/MainPageFooter";
 import Grid from "@mui/material/Grid";
 import { Box } from "@mui/material";
+import { useMemo } from "react";
+import { useHeader } from "../../hooks/useHeader";
 
 function Index() {
+  const headerButtons = useMemo(
+    () => (
+      <>
+        <Button variant="primary">Intră în cont</Button>
+        <Button variant="secondary">Creează-ți cont</Button>
+      </>
+    ),
+    [],
+  );
+
+  useHeader(headerButtons, styles.btnsContainerHeader);
   return (
-    <div className={styles.snapContainer}>
+    <div>
       <section className={`${styles.page} ${styles.page1}`} id="page1">
-        <Header className={styles.btnsContainer}>
-          <Button variant="primary">Intră în cont</Button>
-          <Button variant="secondary">Creează-ți cont</Button>
-        </Header>
-        <Grid container sx={{ flex: 1, p: "5px" }}>
+        <Grid container sx={{ height: "100%", maxHeight: "100vh" }}>
           <Grid
             size={{ xs: 12, md: 6 }}
             sx={{
               display: "flex",
               flexDirection: "column",
-              p: { xs: "20px", md: "40px" },
-              color: "rgb(36, 6, 6)",
+              justifyContent: "center",
+              p: { xs: 2, md: 4 },
             }}
           >
             <div className={styles.wrapper}>
@@ -42,13 +50,13 @@ function Index() {
                       .typeString("Rapid.")
                       .pauseFor(1000)
                       .deleteAll()
-                      .typeString("Rezervă-ți timpul, nu doar locul.") // Îl scrie iar la final
-                      .start(); // Pornește secvența
+                      .typeString("Rezervă-ți timpul, nu doar locul.")
+                      .start();
                   }}
                   options={{
                     autoStart: true,
                     delay: 75,
-                    cursor: "|", // Opțional: poți lăsa cursorul sau îl poți ascunde la final cu CSS
+                    cursor: "|",
                   }}
                 />
               </h1>
@@ -76,12 +84,14 @@ function Index() {
           </Grid>
         </Grid>
       </section>
+
       <section className={`${styles.page} ${styles.page2}`} id="page2">
         <div className={styles.header}>
           <h2 className="mainPage2">Programează-te acum!</h2>
         </div>
         <CardList />
       </section>
+
       <section className={styles.page} id="page3">
         <Box
           component="section"

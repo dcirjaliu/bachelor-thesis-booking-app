@@ -5,8 +5,9 @@
   justify-content: space-between;
   align-items: center;
   background: v.$main-color1;
-  max-height: 10%;
+  height: 80px;
   padding-right: 50px;
+  position: sticky;
 }
 
 .logoWrapper {
@@ -33,6 +34,6 @@
   }
 
   .mainheader {
-    padding: 10px 3%;
+    padding-right: 10px;
   }
 }

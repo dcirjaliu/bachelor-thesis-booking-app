@@ -1,0 +1,9 @@
+@use "../../global_styles/variables" as v;
+
+.snapContainer {
+  height: v.$height;
+  width: v.$width;
+  overflow-y: auto; //vertical scroll
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
