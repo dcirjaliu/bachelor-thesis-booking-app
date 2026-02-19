@@ -1,22 +1,14 @@
 @use "../../global_styles/variables" as v;
 
-.snapContainer {
-  height: v.$height;
-  width: v.$width;
-  overflow-y: scroll; //vertical scroll
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
-}
-
 .page {
   height: v.$height;
-  width: v.$width;
+  //width: v.$width;
   scroll-snap-align: start;
   scroll-snap-stop: always;
   background: v.$bg-color;
 }
 
-.btnsContainer {
+.btnsContainerHeader {
   display: flex;
   justify-content: center;
   flex-direction: row;
@@ -26,20 +18,15 @@
   overflow: visible;
 
   @media (max-width: 768px) {
-    --btn-font-size: 0.85rem;
+    justify-content: flex-end;
+    --btn-font-size: 0.9rem;
     --btn-padding: 0.5rem 1.2rem;
-  }
-
-  @media (max-width: 480px) {
-    --btn-font-size: 0.6rem;
-    --btn-padding: 0.4rem 0.8rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .btnsContainer {
-    align-items: flex-end;
     gap: 8px;
+
+    @media (max-width: 480px) {
+      --btn-font-size: 0.6rem;
+      --btn-padding: 0.4rem 0.8rem;
+    }
   }
 }
 
@@ -47,6 +34,7 @@
   display: flex;
   flex-direction: column;
   gap: 5px;
+  max-height: v.$height;
 }
 
 .wrapper {
@@ -85,15 +73,17 @@
 
 .page2 {
   display: block;
-  width: 100%;
-  height: auto;
-  min-height: 100vh;
-  padding: 50px 30px;
-  overflow-y: visible;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: v.$height;
+  max-height: v.$height;
+  padding: 40px 20px;
   text-align: center;
-
+  overflow: hidden;
   @media screen {
-    padding: 80px 20px;
+    padding: 20px;
+    min-height: fit-content;
   }
 }
 
