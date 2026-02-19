@@ -14,7 +14,10 @@ function Index() {
   return (
     <div className={styles.snapContainer}>
       <section className={`${styles.page} ${styles.page1}`} id="page1">
-        <Header />
+        <Header className={styles.btnsContainer}>
+          <Button variant="primary">Intră în cont</Button>
+          <Button variant="secondary">Creează-ți cont</Button>
+        </Header>
         <Grid container sx={{ flex: 1, p: "5px" }}>
           <Grid
             size={{ xs: 12, md: 6 }}

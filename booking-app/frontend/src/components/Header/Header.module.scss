@@ -21,34 +21,9 @@
   transition: height 0.3s ease;
 }
 
-.btnsContainer {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  align-items: center;
-  gap: 12px;
-  flex-wrap: wrap;
-  overflow: visible;
-
-  @media (max-width: 768px) {
-    --btn-font-size: 0.85rem;
-    --btn-padding: 0.5rem 1.2rem;
-  }
-
-  @media (max-width: 480px) {
-    --btn-font-size: 0.6rem;
-    --btn-padding: 0.4rem 0.8rem;
-  }
-}
-
 @media (max-width: 768px) {
   .logo {
     max-height: 200px;
-  }
-
-  .btnsContainer {
-    align-items: flex-end;
-    gap: 8px;
   }
 }
 
