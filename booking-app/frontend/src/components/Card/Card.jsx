@@ -1,7 +1,8 @@
 import styles from "./Card.module.scss";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
-function Card({ img, title, description, index }) {
+function Card({ img, title, description, index, link }) {
   return (
     <motion.div
       className={styles.card}
@@ -19,7 +20,9 @@ function Card({ img, title, description, index }) {
       </div>
       <p className={styles.heading}>{title}</p>
       <p className={styles.description}>{description}</p>
-      <button className={styles.learnMoreBtn}>Află mai multe </button>
+      <Link to={link} className={styles.learnMoreBtn}>
+        Află mai multe{" "}
+      </Link>
     </motion.div>
   );
 }

@@ -9,7 +9,7 @@ function AppRoutes() {
       <Routes>
         <Route element={<MainLayout />}>
           <Route path="/" element={<IndexPage />} />
-          <Route path="/serviceDetails" element={<ServiceDetails />} />
+          <Route path="/serviceDetails/:id" element={<ServiceDetails />} />
         </Route>
       </Routes>
     </BrowserRouter>

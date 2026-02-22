@@ -1,13 +1,18 @@
 import Grid from "@mui/material/Grid";
-import Header from "../../components/Header/Header";
 import { serviceDetails } from "../../assets/data/serviceDetails";
 import styles from "./ServiceDetails.module.scss";
 import Pagination from "@mui/material/Pagination";
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import { useHeader } from "../../hooks/useHeader";
 import Button from "../../components/Button/Button";
+import { useParams } from "react-router-dom";
 
 function ServiceDetails() {
+  const { id } = useParams();
+  const [page, setPage] = useState(Number(id) || 1);
+
+  const currentService = serviceDetails[page - 1] || serviceDetails[0];
+
   const headerButtons = useMemo(
     () => (
       <>
@@ -27,32 +32,32 @@ function ServiceDetails() {
         md={5}
         sx={{ padding: 3, display: { xs: "none", md: "block" } }}
       >
-        <img src={serviceDetails[0].image} />
+        <img src={currentService.image} />
       </Grid>
       <Grid item xs={12} md={7} sx={{ padding: 3 }}>
-        {serviceDetails.map((s) => (
-          <div key={s.id} className={styles.infoCard}>
-            <h2>{s.title}</h2>
-            <h3>{s.location}</h3>
-            <p>{s.description}</p>
-            <Pagination
-              count={3}
-              size="small"
-              sx={{
-                marginTop: "auto",
-                "& .MuiPaginationItem-root": {
-                  color: "white",
-                },
-                "& .Mui-selected": {
-                  backgroundColor: "rgba(255, 255, 255, 0.3) !important",
-                  color: "white",
-                },
-                alignSelf: "center",
-                paddingBottom: 2,
-              }}
-            />
-          </div>
-        ))}
+        <div className={styles.infoCard}>
+          <h2>{currentService.title}</h2>
+          <h3>{currentService.location}</h3>
+          <p>{currentService.description}</p>
+          <Pagination
+            count={serviceDetails.length}
+            page={page}
+            onChange={(event, value) => setPage(value)}
+            size="small"
+            sx={{
+              marginTop: "auto",
+              "& .MuiPaginationItem-root": {
+                color: "white",
+              },
+              "& .Mui-selected": {
+                backgroundColor: "rgba(255, 255, 255, 0.3) !important",
+                color: "white",
+              },
+              alignSelf: "center",
+              paddingBottom: 2,
+            }}
+          />
+        </div>
       </Grid>
     </Grid>
   );
