@@ -1,0 +1,69 @@
+@use "../../global_styles/variables" as v;
+
+img {
+  border-radius: 20px;
+  height: 550px;
+  width: auto;
+  object-fit: cover;
+}
+
+.infoCard {
+  background-color: v.$main-color1;
+  height: 550px;
+  width: 1000px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  padding: 100px 100px 0px 100px;
+  text-align: left;
+  gap: 20px;
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    height: fit-content;
+    width: auto;
+    padding: 50px;
+  }
+
+  h2 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    background: v.$gradient;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+
+  h3 {
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    color: aqua;
+  }
+
+  p {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+  }
+}
+
+.btnsContainerHeader {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  overflow: visible;
+
+  @media (max-width: 768px) {
+    justify-content: flex-end;
+    --btn-font-size: 0.9rem;
+    --btn-padding: 0.5rem 1.2rem;
+    gap: 8px;
+
+    @media (max-width: 480px) {
+      --btn-font-size: 0.6rem;
+      --btn-padding: 0.4rem 0.8rem;
+    }
+  }
+}
