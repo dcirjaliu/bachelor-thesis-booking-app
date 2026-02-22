@@ -9,6 +9,7 @@ export const services = [
     description:
       "Rezervă-ți unul dintre spațiile dedicate studiului din cadrul Bibliotecii UPT.",
     image: imgBUPT,
+    link: "/serviceDetails/1",
   },
   {
     key: 2,
@@ -16,6 +17,7 @@ export const services = [
     description:
       "Fă o rezervare la terenurile de sport sau sălile de sport din cadrul Bazei 2 UPT.",
     image: imgBaza2,
+    link: "/serviceDetails/2",
   },
   {
     key: 3,
@@ -23,5 +25,6 @@ export const services = [
     description:
       "Rezervă-ți unul dintre intervalele orare disponibile la spălătoriile din cămine.",
     image: imgCampus,
+    link: "/serviceDetails/3",
   },
 ];

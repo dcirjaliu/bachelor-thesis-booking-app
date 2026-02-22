@@ -27,7 +27,7 @@ function CardList() {
             img={item.image}
             title={item.title}
             description={item.description}
-            link={item.link}
+            link={`/serviceDetails/${index + 1}`}
           />
         </Grid>
       ))}
