@@ -1,7 +1,7 @@
 import styles from "./AccentShape.module.scss";
 
-function AccentShape() {
-  return <div className={styles.shape}></div>;
+function AccentShape({ children }) {
+  return <div className={styles.shape}>{children}</div>;
 }
 
 export default AccentShape;

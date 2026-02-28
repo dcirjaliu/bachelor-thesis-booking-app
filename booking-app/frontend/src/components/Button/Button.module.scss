@@ -30,6 +30,11 @@
   border: 1px solid rgba(255, 255, 255, 0.8);
 }
 
+.tertiary {
+  background: linear-gradient(90deg, #6372ff 0%, #f168ff 100%);
+  color: white;
+}
+
 .sparkle {
   fill: #aaaaaa;
   transition: all 800ms ease;

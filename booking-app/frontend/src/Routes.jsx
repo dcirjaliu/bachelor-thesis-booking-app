@@ -4,6 +4,7 @@ import ServiceDetails from "./pages/ServiceDetails/ServiceDetails";
 import MainLayout from "./layouts/MainLayout/MainLayout";
 import AuthenticatedLayout from "./layouts/AuthenticatedLayout/AuthenticatedLayout";
 import Home from "./pages/accountPages/Home/Home";
+import MyProfile from "./pages/accountPages/MyProfile/MyProfile";
 
 function AppRoutes() {
   return (
@@ -15,6 +16,7 @@ function AppRoutes() {
 
           <Route element={<AuthenticatedLayout />}>
             <Route path="/account/home" element={<Home />} />
+            <Route path="/account/myProfile" element={<MyProfile />} />
           </Route>
         </Route>
       </Routes>
