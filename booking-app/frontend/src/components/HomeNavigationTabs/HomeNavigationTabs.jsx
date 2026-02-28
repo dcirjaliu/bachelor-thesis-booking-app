@@ -31,7 +31,7 @@ function HomeNavigationTabs() {
             minWidth: "auto",
             fontSize: { xs: "0.85rem", md: "1rem" },
             padding: { xs: "6px 10px", md: "12px 16px" },
-            flexDirection: { xs: "column", md: "column" },
+            flexDirection: { xs: "row", md: "column" },
           },
           "& .Mui-selected": {
             color: "#00ffff !important",

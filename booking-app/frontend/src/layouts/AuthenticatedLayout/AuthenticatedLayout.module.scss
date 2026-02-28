@@ -1,0 +1,14 @@
+.btnContainerHeader {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-items: center;
+  overflow: visible;
+  width: 100%;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    --btn-font-size: 0.6rem;
+    --btn-padding: 0.4rem 0.8rem;
+  }
+}
