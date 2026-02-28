@@ -1,6 +1,7 @@
 import Box from "@mui/material/Box";
 import styles from "./MyReservations.module.scss";
 import HomeNavigationTabs from "../../../components/HomeNavigationTabs/HomeNavigationTabs";
+import ReservationList from "../../../containers/ReservationList/ReservationList";
 
 function MyReservations() {
   return (
@@ -11,6 +12,7 @@ function MyReservations() {
         label3="Anulate"
         indicatorColor="#280f91"
       />
+      <ReservationList />
     </Box>
   );
 }
