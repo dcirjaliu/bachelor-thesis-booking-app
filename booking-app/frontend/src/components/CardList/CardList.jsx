@@ -2,7 +2,7 @@ import { services } from "../../assets/data/indexData.js";
 import Card from "../Card/Card";
 import Grid from "@mui/material/Grid";
 
-function CardList() {
+function CardList({ isLoggedIn = false, children, styleAlignment, styleGap }) {
   return (
     <Grid
       container
@@ -26,8 +26,12 @@ function CardList() {
             key={index}
             img={item.image}
             title={item.title}
-            description={item.description}
+            description={!isLoggedIn ? item.description : undefined}
             link={`/serviceDetails/${index + 1}`}
+            isLoggedIn={isLoggedIn}
+            children={children}
+            styleAlignment={styleAlignment}
+            styleGap={styleGap}
           />
         </Grid>
       ))}

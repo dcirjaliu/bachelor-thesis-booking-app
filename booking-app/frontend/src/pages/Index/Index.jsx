@@ -10,6 +10,7 @@ import Grid from "@mui/material/Grid";
 import { Box } from "@mui/material";
 import { useMemo } from "react";
 import { useHeader } from "../../hooks/useHeader";
+import { services } from "../../assets/data/indexData";
 
 function Index() {
   const headerButtons = useMemo(
@@ -89,7 +90,7 @@ function Index() {
         <div className={styles.header}>
           <h2 className="mainPage2">Programează-te acum!</h2>
         </div>
-        <CardList />
+        <CardList isLoggedIn={false} />
       </section>
 
       <section className={styles.page} id="page3">
