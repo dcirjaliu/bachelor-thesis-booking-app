@@ -3,7 +3,14 @@ import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
 import { useState } from "react";
 
-function HomeNavigationTabs() {
+function HomeNavigationTabs({
+  label1,
+  label2,
+  label3,
+  indicatorColor,
+  textColor = "black",
+  selectedColor = "#00ffff !important",
+}) {
   const [value, setValue] = useState(0);
 
   const handleChange = (event, newValue) => {
@@ -25,7 +32,7 @@ function HomeNavigationTabs() {
             justifyContent: { xs: "flex-start", md: "center" },
           },
           "& .MuiTab-root": {
-            color: "white",
+            color: textColor,
             textTransform: "none",
             fontSize: "1rem",
             minWidth: "auto",
@@ -34,16 +41,16 @@ function HomeNavigationTabs() {
             flexDirection: { xs: "row", md: "column" },
           },
           "& .Mui-selected": {
-            color: "#00ffff !important",
+            color: `${selectedColor} !important`,
           },
           "& .MuiTabs-indicator": {
-            backgroundColor: "#00ffff",
+            backgroundColor: indicatorColor,
           },
         }}
       >
-        <Tab label="Acasă" />
-        <Tab label="Profilul meu" />
-        <Tab label="Rezervările mele" />
+        <Tab label={label1} />
+        <Tab label={label2} />
+        <Tab label={label3} />
       </Tabs>
     </Box>
   );
