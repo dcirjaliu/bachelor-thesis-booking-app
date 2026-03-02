@@ -2,7 +2,7 @@
 
 .container {
   background: v.$bg-color;
-  height: calc(100vh - 80px);
+  min-height: calc(100vh - 80px);
   width: 100%;
   gap: 10px;
   padding-top: 50px;
