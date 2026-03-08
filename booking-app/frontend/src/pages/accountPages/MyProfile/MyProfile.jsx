@@ -5,10 +5,13 @@ import ProfileCard from "../../../components/ProfileCard/ProfileCard";
 import styles from "./MyProfile.module.scss";
 
 function MyProfile() {
-  const headerHeight = "80px";
   return (
     <Box className={styles.container}>
-      <Grid container spacing={0}>
+      <Grid
+        container
+        spacing={0}
+        sx={{ minHeight: "100vh", alignItems: "center" }}
+      >
         <Grid
           size={{ md: 6 }}
           sx={{
