@@ -8,7 +8,7 @@ import Chip from "@mui/material/Chip";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
-import styles from "./Reservation.module.scss";
+import styles from "./ReservationCard.module.scss";
 
 const MOCK_DATA = Array.from({ length: 4 }, (_, index) => ({
   id: index,
